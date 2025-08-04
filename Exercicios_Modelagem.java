@@ -3,6 +3,7 @@ public class Exercicios_Modelagem {
         System.out.println(fatorial(3));
         System.out.println(somatorio(0));
         System.out.println(fibon(6));
+        System.out.println(double_somatorio(1,6));
     }   
     public static int fatorial(int n){
         if(n == 0)
@@ -31,5 +32,14 @@ public class Exercicios_Modelagem {
         return fibon(n-1) + fibon(n-2);
     }
 
+    public static int double_somatorio(int k, int j){
+        if(k<j)
+        return k + double_somatorio(k+1, k);
+        if(k>j)
+        return double_somatorio(j, k);
+        else
+        return 0;
+    }
+    
 }
 
