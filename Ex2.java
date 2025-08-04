@@ -8,7 +8,6 @@ public class Ex2{
     public static int soma(int a, int b){
         if(b == 0)
         return a;
-
         return soma(++a, --b);
     }
 }
