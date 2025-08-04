@@ -2,6 +2,7 @@ public class Exercicios_Modelagem {
     public static void main(String args[]){
         System.out.println(fatorial(3));
         System.out.println(somatorio(0));
+        System.out.println(fibon(6));
     }   
     public static int fatorial(int n){
         if(n == 0)
@@ -21,7 +22,14 @@ public class Exercicios_Modelagem {
         return 0;
     }
 
-    
+    public static int fibon(int n){
+        if(n <= 0)
+        return 0;
+        if(n == 1)
+        return 1;
+        else
+        return fibon(n-1) + fibon(n-2);
+    }
 
 }
 
