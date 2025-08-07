@@ -1,21 +1,19 @@
-import java.util.Random;
 public class Ex7 {
-    public static void main(String args[]){
-        System.out.println();
-        System.out.println(pal("aba"));
-        System.out.println("abba".substring("abba".length()/2));
-        System.out.println(inv_str("abba".substring(0,("abba".length())/2)));
-        System.out.println(pal("aoba"));
+    public static int soma(int[] v, int i) {
+        if (i == v.length)
+            return 0;
+        return v[i] + soma(v, i + 1);
     }
 
-    public static String inv_str(String s){
-        if(s.isEmpty()) return s;
-        return inv_str(s.substring(1)) + s.charAt(0);
+    public static int produto(int[] v, int i) {
+        if (i == v.length)
+            return 1;
+        return v[i] * produto(v, i + 1);
     }
 
-    public static boolean pal(String s){
-        if(s.substring(s.length()/2).equals(inv_str(s.substring(0,(s.length())/2))))
-        return true;
-        return false;
+    public static void main(String[] args) {
+        int[] vetor = { 2, 3, 4 };
+        System.out.println("soma: " + soma(vetor, 0));
+        System.out.println("produto: " + produto(vetor, 0));
     }
 }
